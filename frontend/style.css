@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+#drop-area {
+  border: 2px dashed #7fba00;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 60%;
+  background: #f9f9f9;
+}
+
+#drop-area.highlight {
+  background: #eaffea;
+}
+
+#fileElem {
+  display: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 8px;
+  background: #7fba00;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #6da800;
+}
+
+#uploadBtn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#uploadBtn:hover {
+  background: #555;
+}
+
+#output {
+  text-align: left;
+  margin-top: 20px;
+  padding: 10px;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  max-height: 400px;
+  overflow: auto;
+}
