@@ -19,7 +19,8 @@ app = FastAPI(title="Data Analyst Agent", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://analyst-agent-iernvbm0y-balajis-projects-613078f7.vercel.app/"],
+    # allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
