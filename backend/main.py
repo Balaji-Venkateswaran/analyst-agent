@@ -23,9 +23,10 @@ app.add_middleware(
     # allow_origins=["*"],
     allow_origins=[
         "https://analyst-agent-iernvbm0y-balajis-projects-613078f7.vercel.app",  # your Vercel frontend
-        "https://analyst-agent-frontend.onrender.com",  # if hosted on Render
+        "https://analyst-agent-nine.vercel.app/",  # if hosted on Render
         "http://localhost:8000",  # for local testing
-        "http://127.0.0.1:8000"
+        "http://127.0.0.1:8000",
+        
     ],
     allow_credentials=True,
     allow_methods=["*"],
