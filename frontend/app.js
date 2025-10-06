@@ -45,7 +45,8 @@ uploadBtn.addEventListener("click", async () => {
   output.textContent = "⏳ Uploading...";
 
   try {
-    const res = await fetch("http://localhost:8000/api/", {
+    // const res = await fetch("http://localhost:8000/api/", {
+     const res = await fetch("https://analyst-agent.onrender.com/api/", {
       method: "POST",
       body: formData
     });
