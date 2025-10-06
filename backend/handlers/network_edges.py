@@ -6,8 +6,10 @@ import networkx as nx
 import numpy as np
 import pandas as pd
 
-from utils.encoding import fig_to_data_uri_under_limit
+from typing import Dict, List
 
+
+from utils.encoding import fig_to_data_uri_under_limit
 
 def _load_edges_from_attachment(attachments: Dict[str, any]) -> pd.DataFrame:
     key = None
@@ -81,11 +83,6 @@ async def handle_network_edges_task(
     average_degree = (2 * edge_count / G.number_of_nodes()) if G.number_of_nodes() else 0.0
     density = nx.density(G)
 
-    # try:
-    #     shortest_alice_eve = nx.shortest_path_length(G, "Alice", "Eve")
-    # except Exception:
-    #     shortest_alice_eve = None
-
     network_graph = _draw_network_b64(G)
     degree_histogram = _draw_degree_hist_b64(G)
 
@@ -101,13 +98,3 @@ async def handle_network_edges_task(
 
     if wants_object or "Return a JSON object with keys" in q_text:
         return result_obj
-
-    # answers: List[any] = [
-    #     edge_count,
-    #     highest_degree_node,
-    #     float(average_degree),
-    #     float(density),
-    #     # shortest_alice_eve if shortest_alice_eve is not None else -1,
-    #     network_graph,
-    #     degree_histogram,
-    # ]
