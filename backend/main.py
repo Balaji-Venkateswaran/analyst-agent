@@ -19,8 +19,14 @@ app = FastAPI(title="Data Analyst Agent", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://analyst-agent-iernvbm0y-balajis-projects-613078f7.vercel.app/"],
+    # allow_origins=["https://analyst-agent-iernvbm0y-balajis-projects-613078f7.vercel.app/"],
     # allow_origins=["*"],
+    allow_origins=[
+        "https://analyst-agent-iernvbm0y-balajis-projects-613078f7.vercel.app",  # your Vercel frontend
+        "https://analyst-agent-frontend.onrender.com",  # if hosted on Render
+        "http://localhost:8000",  # for local testing
+        "http://127.0.0.1:8000"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
