@@ -1,24 +1,41 @@
-# fastapi==0.115.3
-# uvicorn==0.30.6
-# pandas==2.2.3
-# numpy==2.1.2
-# matplotlib==3.9.2
-# requests==2.32.3
-# beautifulsoup4==4.12.3
-# lxml==5.3.0
-# networkx==3.4.2
-# pillow==10.4.0
 
+# fastapi
+# uvicorn[standard]
+# python-dotenv
+# google-generativeai
+# duckdb
+# pandas
+# matplotlib
+# numpy
+# requests
+# beautifulsoup4
+# lxml
+# pillow
 
+# --- Web Framework & Server ---
 fastapi
 uvicorn[standard]
+
+# --- Environment Variables ---
 python-dotenv
+
+# --- AI / LLM Integration ---
 google-generativeai
+
+# --- Data Handling & Analytics ---
 duckdb
 pandas
-matplotlib
 numpy
+matplotlib
+
+# --- Web Scraping & HTTP ---
 requests
 beautifulsoup4
 lxml
+
+# --- Image Handling & Encoding ---
 pillow
+
+# --- File Upload Support (Required for FastAPI File(...)) ---
+python-multipart
+
